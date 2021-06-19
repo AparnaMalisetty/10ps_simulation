@@ -12,3 +12,6 @@ STEPS:
 6) equilibration with constraints on c-alpha atoms
 7) production
 
+Different methods are done to get the proper embedding on protein in membrane: CHARMM36m_POPCbilayer.pdb is a pre equilibrated lipid bilayer which I got it from Saskia (works at Juelich)
+Note: the rP2X1 has a huge extracellular domain and when inserted into membrane some part of it is not covereed with teh solvent of the pre equilibrated membrane.
+Method1: 
