@@ -3,7 +3,7 @@ A 10ps of equilibration with varying constarints and production is done to verif
 
 
 steps:
-1) protein alignment with membrane using opm server
+1) protein alignment with membrane using opm server: different methods are tried to align teh protein properly to the membrane.
 2) energy minimisation
 3) equilibvration with constarints on protein
 4) equilibration with constraints on heavy atoms
