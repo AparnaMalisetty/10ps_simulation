@@ -14,5 +14,6 @@ STEPS:
 
 Different methods are done to get the proper embedding on protein in membrane: CHARMM36m_POPCbilayer.pdb is a pre equilibrated lipid bilayer which I got it from Saskia (works at Juelich)
 Note: the rP2X1 has a huge extracellular domain and when inserted into membrane some part of it is not covereed with teh solvent of the pre equilibrated membrane.
-1) Method1: the water and ions that are present in the membrane are removed completely and the box size is increased. Then the water is added again and embedding is done after removing the water in lipid bilayers. Result: stopped at step0: stating bad contacts and bad rotations and cannot make triclinic boxes. I even decraesed the time step to 1fs this time I got the error stating only about the bad contacts and bad angles.
+1) Method1_Unsuccesful: the water and ions that are present in the membrane are removed completely and the box size is increased. Then the water is added again and embedding is done after removing the water in lipid bilayers. Result: stopped at step0: stating bad contacts and bad rotations and cannot make triclinic boxes. I even decraesed the time step to 1fs this time I got the error stating only about the bad contacts and bad angles.
+2) 
 3) 
