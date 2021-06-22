@@ -7,10 +7,11 @@ steps:
 1) orientation of the protein using opm server
 2) Protein embedding with membrane using  using g_membed: different methods are tried to align the protein properly to the membrane.
 4) energy minimisation
-5) equilibration with constraints on protein
-6) equilibration with constraints on heavy atoms
-7) equilibration with constraints on c-alpha atoms
-8) production
+5) NVT equilibration with position restraints on the protein of force constant 1000 kj/mol/nm2 and run for 10ps
+6) NPT equilibration with position restraints on the protein of force constant 1000 kj/mol/nm2 and run for 10ps
+7) NPT equilibration with restraints on backbone of force constant 1000 kj/mol/nm2 and run for 10ps
+8) NPT equilibration with restraints on c-alpha atoms of force constant 1000 kj/mol/nm2 and run for 10ps
+9) production with no restraints for 10ps
 
 STEP1: Orientation of the protein using Opm server
 1) rP2X1 homology model is built usinmg the software Modeller 10.0. The sidechains are modelled using scwrl4 program : rP2X1_sc.pdb
