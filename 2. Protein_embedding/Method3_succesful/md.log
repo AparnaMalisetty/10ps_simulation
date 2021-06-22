@@ -1,0 +1,2314 @@
+Log file opened on Fri Jun 18 11:47:26 2021
+Host: UK-2016600318  pid: 198  rank ID: 0  number of ranks:  1
+                      :-) GROMACS - gmx mdrun, 2018.8 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018.8
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /mnt/c/Aparna/HP2X4_FINAL/10ps_membraneproteinruns/rP2X1_genconf
+Command line:
+  gmx mdrun -membed membed.dat -s membed.tpr -v -c rP2X1_POPCmembed.pdb
+
+GROMACS version:    2018.8
+Precision:          single
+Memory model:       64 bit
+MPI library:        thread_mpi
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
+GPU support:        disabled
+SIMD instructions:  NONE
+FFT library:        fftw-3.3.8-sse2-avx
+RDTSCP usage:       disabled
+TNG support:        enabled
+Hwloc support:      disabled
+Tracing support:    disabled
+Built on:           2021-05-10 14:36:41
+Built by:           root@UK-2016600318 [CMAKE]
+Build OS/arch:      Linux 4.4.0-18362-Microsoft x86_64
+Build CPU vendor:   Unknown
+Build CPU brand:    Unknown
+Build CPU family:   0   Model: 0   Stepping: 0
+Build CPU features: Unknown
+C compiler:         /usr/bin/gcc GNU 9.3.0
+C compiler flags:        -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+C++ compiler:       /usr/bin/c++ GNU 9.3.0
+C++ compiler flags:     -std=c++11   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+
+
+Running on 1 node with total 4 cores, 4 logical cores
+Hardware detected:
+  CPU info:
+    Vendor: Intel
+    Brand:  Intel(R) Core(TM) i3-6100 CPU @ 3.70GHz
+    Family: 6   Model: 94   Stepping: 3
+    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+  Hardware topology: Only logical processor count
+
+Highest SIMD level requested by all nodes in run: AVX2_256
+SIMD instructions selected at compile time:       None
+This program was compiled for different hardware than you are running on,
+which could influence performance.
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+
+Multiple energy groups is not implemented for GPUs, falling back to the CPU. For better performance, run on the GPU without energy groups and then do gmx mdrun -rerun option on the trajectory with an energy group .tpr file.
+
+Membrane embedding only supports a single rank. Choosing to use only a single thread-MPI rank.
+Input Parameters:
+   integrator                     = md
+   tinit                          = 0
+   dt                             = 0.002
+   nsteps                         = 1000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100
+   bd-fric                        = 0
+   ld-seed                        = 1466341697
+   emtol                          = 10
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 100000
+   nstvout                        = 100000
+   nstfout                        = 100000
+   nstlog                         = 100000
+   nstcalcenergy                  = 50
+   nstenergy                      = 50
+   nstxout-compressed             = 0
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Group
+   nstlist                        = 10
+   ns-type                        = Grid
+   pbc                            = xyz
+   periodic-molecules             = false
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1.2
+   coulombtype                    = PME
+   coulomb-modifier               = None
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1.2
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = None
+   rvdw-switch                    = 1
+   rvdw                           = 1.2
+   DispCorr                       = No
+   table-extension                = 1
+   fourierspacing                 = 0.12
+   fourier-nx                     = 160
+   fourier-ny                     = 160
+   fourier-nz                     = 256
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   implicit-solvent               = No
+   gb-algorithm                   = Still
+   nstgbradii                     = 1
+   rgbradii                       = 1
+   gb-epsilon-solvent             = 80
+   gb-saltconc                    = 0
+   gb-obc-alpha                   = 1
+   gb-obc-beta                    = 0.8
+   gb-obc-gamma                   = 4.85
+   gb-dielectric-offset           = 0.009
+   sa-algorithm                   = Ace-approximation
+   sa-surface-tension             = 2.05016
+   tcoupl                         = V-rescale
+   nsttcouple                     = 10
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = false
+   pcoupl                         = Berendsen
+   pcoupltype                     = Semiisotropic
+   nstpcouple                     = 10
+   tau-p                          = 1
+   compressibility (3x3):
+      compressibility[    0]={ 5.30000e-05,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  5.30000e-05,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  5.30000e-05}
+   ref-p (3x3):
+      ref-p[    0]={ 1.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  1.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  1.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = false
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = false
+   Shake-SOR                      = false
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = false
+   awh                            = false
+   rotation                       = false
+   interactiveMD                  = false
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = false
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = false
+   swapcoords                     = no
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+   applied-forces:
+     electric-field:
+       x:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       y:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+       z:
+         E0                       = 0
+         omega                    = 0
+         t0                       = 0
+         sigma                    = 0
+grpopts:
+   nrdf:           0      501415  1.37484e+06
+   ref-t:         310         310         310
+   tau-t:         0.1         0.1         0.1
+annealing:          No          No          No
+annealing-npoints:           0           0           0
+   acc:	           0           0           0
+   nfreeze:           Y           Y           Y           N           N           N
+   energygrp-flags[  0]: 1 0
+   energygrp-flags[  1]: 0 0
+
+
+Using 1 MPI thread
+
+Pinning threads with an auto-selected logical core stride of 4
+rm mol 923
+rm mol 107535
+rm mol 17268
+rm mol 34761
+rm mol 69166
+rm mol 93998
+rm mol 669
+rm mol 377
+rm mol 715
+rm mol 204
+rm mol 697
+rm mol 545
+rm mol 355
+rm mol 476
+rm mol 335
+rm mol 263
+rm mol 801
+rm mol 48562
+rm mol 61517
+rm mol 102
+rm mol 602
+rm mol 60194
+rm mol 67504
+rm mol 108020
+rm mol 99424
+rm mol 40983
+rm mol 4084
+rm mol 350
+rm mol 99847
+rm mol 20380
+rm mol 76510
+rm mol 112897
+rm mol 48380
+rm mol 120
+rm mol 104328
+rm mol 77550
+rm mol 90743
+rm mol 20567
+rm mol 115667
+rm mol 27151
+rm mol 58648
+rm mol 3982
+rm mol 32230
+rm mol 100153
+rm mol 93212
+rm mol 36480
+rm mol 56078
+rm mol 84687
+rm mol 8735
+rm mol 19335
+rm mol 18167
+rm mol 31130
+rm mol 23957
+rm mol 103525
+rm mol 63747
+rm mol 101233
+rm mol 60536
+rm mol 92693
+rm mol 69587
+rm mol 13620
+rm mol 49505
+rm mol 69754
+rm mol 76625
+rm mol 28729
+rm mol 72628
+rm mol 42750
+rm mol 111926
+rm mol 57217
+rm mol 20936
+rm mol 27892
+rm mol 57112
+rm mol 57752
+rm mol 44783
+rm mol 42895
+rm mol 30405
+rm mol 28170
+rm mol 4736
+rm mol 113452
+rm mol 92684
+rm mol 7017
+rm mol 88425
+rm mol 56072
+rm mol 28417
+rm mol 114918
+rm mol 11119
+rm mol 17995
+rm mol 104028
+rm mol 33002
+rm mol 84766
+rm mol 101007
+rm mol 81840
+rm mol 99871
+rm mol 34363
+rm mol 86940
+rm mol 3830
+rm mol 115188
+rm mol 18086
+rm mol 72344
+rm mol 96412
+rm mol 50788
+rm mol 80228
+rm mol 79910
+rm mol 51301
+rm mol 15321
+rm mol 42049
+rm mol 82317
+rm mol 17160
+rm mol 3483
+rm mol 63219
+rm mol 59177
+rm mol 82580
+rm mol 37748
+rm mol 45285
+rm mol 39483
+rm mol 97445
+rm mol 91151
+rm mol 152308
+rm mol 128647
+rm mol 126477
+rm mol 206947
+rm mol 200400
+rm mol 180356
+rm mol 202904
+rm mol 135063
+rm mol 219030
+rm mol 202425
+rm mol 183885
+rm mol 157488
+rm mol 50530
+rm mol 136509
+rm mol 222727
+rm mol 4127
+rm mol 185949
+rm mol 144455
+rm mol 211891
+rm mol 199215
+rm mol 164725
+rm mol 71672
+rm mol 67634
+rm mol 109745
+rm mol 33690
+rm mol 63739
+rm mol 25496
+rm mol 32689
+rm mol 5087
+rm mol 23109
+rm mol 98951
+rm mol 74406
+rm mol 111364
+rm mol 59219
+rm mol 39515
+rm mol 21979
+rm mol 5027
+rm mol 16097
+rm mol 104927
+rm mol 56781
+rm mol 67576
+rm mol 52026
+rm mol 38592
+rm mol 43862
+rm mol 50433
+rm mol 6406
+rm mol 92491
+rm mol 55584
+rm mol 90000
+rm mol 13432
+rm mol 96323
+rm mol 76523
+rm mol 28717
+rm mol 99802
+rm mol 27691
+rm mol 56995
+rm mol 46977
+rm mol 13976
+rm mol 50423
+rm mol 58935
+rm mol 8743
+rm mol 51023
+rm mol 26153
+rm mol 85170
+rm mol 5976
+rm mol 63389
+rm mol 75341
+rm mol 23770
+rm mol 35052
+rm mol 57788
+rm mol 27903
+rm mol 107127
+rm mol 64803
+rm mol 23158
+rm mol 93072
+rm mol 60351
+rm mol 39159
+rm mol 82199
+rm mol 34261
+rm mol 101275
+rm mol 156621
+rm mol 153970
+rm mol 196003
+rm mol 130061
+rm mol 194935
+rm mol 229909
+rm mol 224593
+rm mol 198392
+rm mol 151853
+rm mol 231112
+rm mol 156930
+rm mol 149308
+rm mol 179355
+rm mol 187889
+rm mol 178280
+rm mol 131817
+rm mol 180619
+rm mol 117053
+rm mol 153184
+rm mol 143019
+rm mol 161341
+rm mol 185618
+rm mol 162736
+rm mol 162048
+rm mol 184796
+rm mol 218251
+rm mol 125164
+rm mol 157365
+rm mol 227227
+rm mol 150545
+rm mol 197579
+rm mol 182669
+rm mol 128433
+rm mol 141214
+rm mol 129811
+rm mol 173292
+rm mol 213899
+rm mol 120891
+rm mol 144553
+rm mol 123955
+rm mol 5338
+rm mol 27214
+rm mol 12703
+rm mol 189983
+rm mol 117024
+rm mol 148628
+rm mol 88622
+rm mol 231362
+rm mol 61574
+rm mol 62327
+rm mol 60061
+rm mol 83942
+rm mol 90225
+rm mol 56993
+rm mol 9573
+rm mol 19920
+rm mol 42522
+rm mol 105642
+rm mol 68416
+rm mol 70800
+rm mol 24880
+rm mol 186923
+rm mol 171614
+rm mol 187209
+rm mol 220967
+rm mol 170670
+rm mol 185895
+rm mol 187455
+rm mol 214856
+rm mol 230480
+rm mol 162674
+rm mol 173817
+rm mol 225847
+rm mol 161899
+rm mol 199688
+rm mol 148208
+rm mol 166547
+rm mol 132068
+rm mol 203096
+rm mol 135331
+rm mol 58924
+rm mol 66104
+rm mol 204554
+rm mol 200285
+rm mol 48148
+rm mol 58187
+rm mol 52426
+rm mol 69977
+rm mol 43143
+rm mol 27631
+rm mol 61313
+rm mol 49184
+rm mol 92207
+rm mol 41941
+rm mol 25992
+rm mol 59961
+rm mol 65407
+rm mol 19442
+rm mol 26558
+rm mol 76545
+rm mol 18314
+rm mol 34910
+rm mol 47657
+rm mol 4417
+rm mol 36873
+rm mol 39414
+rm mol 12455
+rm mol 107313
+rm mol 40206
+rm mol 62671
+rm mol 37391
+rm mol 38857
+rm mol 52678
+rm mol 7587
+rm mol 66299
+rm mol 76911
+rm mol 69169
+rm mol 68098
+rm mol 109167
+rm mol 152336
+rm mol 138415
+rm mol 201380
+rm mol 141323
+rm mol 226024
+rm mol 208425
+rm mol 162343
+rm mol 132998
+rm mol 165010
+rm mol 167478
+rm mol 189250
+rm mol 193231
+rm mol 182144
+rm mol 221530
+rm mol 137314
+rm mol 193812
+rm mol 153718
+rm mol 168248
+rm mol 217799
+rm mol 159105
+rm mol 133454
+rm mol 126175
+rm mol 172501
+rm mol 118252
+rm mol 178597
+rm mol 195432
+rm mol 128352
+rm mol 131743
+rm mol 186863
+rm mol 153057
+rm mol 191964
+rm mol 153422
+rm mol 226976
+rm mol 206079
+rm mol 45840
+rm mol 108914
+rm mol 113461
+rm mol 41288
+rm mol 53606
+rm mol 115815
+rm mol 87185
+rm mol 38281
+rm mol 101816
+rm mol 133400
+rm mol 179373
+rm mol 144814
+rm mol 111938
+rm mol 67253
+rm mol 10743
+rm mol 100434
+rm mol 62493
+rm mol 90779
+rm mol 75085
+rm mol 115929
+rm mol 37430
+rm mol 27162
+rm mol 64818
+rm mol 78318
+rm mol 82072
+rm mol 24472
+rm mol 91037
+rm mol 61050
+rm mol 60854
+rm mol 29307
+rm mol 10487
+rm mol 37133
+rm mol 90071
+rm mol 4797
+rm mol 7561
+rm mol 9532
+rm mol 108309
+rm mol 6571
+rm mol 7897
+rm mol 111327
+rm mol 57629
+rm mol 11831
+rm mol 36093
+rm mol 14860
+rm mol 94776
+rm mol 24735
+rm mol 89274
+rm mol 61804
+rm mol 25712
+rm mol 74805
+rm mol 103431
+rm mol 13650
+rm mol 108553
+rm mol 105706
+rm mol 82132
+rm mol 43337
+rm mol 103068
+rm mol 58690
+rm mol 82431
+rm mol 966
+rm mol 24982
+rm mol 104410
+rm mol 37659
+rm mol 64996
+rm mol 15927
+rm mol 50226
+rm mol 25288
+rm mol 98445
+rm mol 115329
+rm mol 12889
+rm mol 32464
+rm mol 34895
+rm mol 82287
+rm mol 27650
+rm mol 87943
+rm mol 23209
+rm mol 59308
+rm mol 42537
+rm mol 98414
+rm mol 46410
+rm mol 77381
+rm mol 62439
+rm mol 29621
+rm mol 86061
+rm mol 108403
+rm mol 100874
+rm mol 97610
+rm mol 54878
+rm mol 72169
+rm mol 81356
+rm mol 80144
+rm mol 23926
+rm mol 35960
+rm mol 74720
+rm mol 104616
+rm mol 60231
+rm mol 59250
+rm mol 38984
+rm mol 41470
+rm mol 85286
+rm mol 77206
+rm mol 16537
+rm mol 71466
+rm mol 53184
+rm mol 105237
+rm mol 38154
+rm mol 79269
+rm mol 111351
+rm mol 72427
+rm mol 111345
+rm mol 74559
+rm mol 74154
+rm mol 5156
+rm mol 41995
+rm mol 102455
+rm mol 9173
+rm mol 8892
+rm mol 20423
+rm mol 41034
+rm mol 77607
+rm mol 22276
+rm mol 28687
+rm mol 76677
+rm mol 49032
+rm mol 2270
+rm mol 25241
+rm mol 12459
+rm mol 4198
+rm mol 39133
+rm mol 89189
+rm mol 50146
+rm mol 71871
+rm mol 99987
+rm mol 19257
+rm mol 61529
+rm mol 94515
+rm mol 30699
+rm mol 68132
+rm mol 74135
+rm mol 70933
+rm mol 53417
+rm mol 63332
+rm mol 60559
+rm mol 104389
+rm mol 78802
+rm mol 2852
+rm mol 51877
+rm mol 104813
+rm mol 21821
+rm mol 88815
+rm mol 21045
+rm mol 46232
+rm mol 115189
+rm mol 93917
+rm mol 110639
+rm mol 39912
+rm mol 55535
+rm mol 7786
+rm mol 92358
+rm mol 50065
+rm mol 82851
+rm mol 73297
+rm mol 65085
+rm mol 39100
+rm mol 77013
+rm mol 12147
+rm mol 99334
+rm mol 19577
+rm mol 107964
+rm mol 67972
+rm mol 33695
+rm mol 88810
+rm mol 110082
+rm mol 62878
+rm mol 64100
+rm mol 28914
+rm mol 42429
+rm mol 11878
+rm mol 82709
+rm mol 80950
+rm mol 76527
+rm mol 42045
+rm mol 109530
+rm mol 101054
+rm mol 22311
+rm mol 20131
+rm mol 93271
+rm mol 112516
+rm mol 113572
+rm mol 53045
+rm mol 36404
+rm mol 28753
+rm mol 96760
+rm mol 54158
+rm mol 63458
+rm mol 88962
+rm mol 8977
+rm mol 57673
+rm mol 40098
+rm mol 92945
+rm mol 17968
+rm mol 11908
+rm mol 19393
+rm mol 81788
+rm mol 92181
+rm mol 49997
+rm mol 109232
+rm mol 49541
+rm mol 59045
+rm mol 111139
+rm mol 10018
+rm mol 20411
+rm mol 44073
+rm mol 49662
+rm mol 36454
+rm mol 90066
+rm mol 90677
+rm mol 8593
+rm mol 68134
+rm mol 42987
+rm mol 48315
+rm mol 53401
+rm mol 94392
+rm mol 91010
+rm mol 63066
+rm mol 20257
+rm mol 88319
+rm mol 91583
+rm mol 71812
+rm mol 17431
+rm mol 107767
+rm mol 99486
+rm mol 41133
+rm mol 57658
+rm mol 71709
+rm mol 92039
+rm mol 21175
+rm mol 24815
+rm mol 99767
+rm mol 106446
+rm mol 67931
+rm mol 73684
+rm mol 100015
+rm mol 71305
+rm mol 6765
+rm mol 97851
+rm mol 106229
+rm mol 61340
+rm mol 88524
+rm mol 94619
+rm mol 21454
+rm mol 35912
+rm mol 63226
+rm mol 107788
+rm mol 58956
+rm mol 64231
+rm mol 64619
+rm mol 113148
+rm mol 62200
+rm mol 78864
+rm mol 8309
+rm mol 55498
+rm mol 62331
+rm mol 7242
+rm mol 14428
+rm mol 100032
+rm mol 93835
+rm mol 31247
+rm mol 103067
+rm mol 57690
+rm mol 79310
+rm mol 30182
+rm mol 75171
+rm mol 101122
+rm mol 67180
+rm mol 73563
+rm mol 33146
+rm mol 114355
+rm mol 3905
+rm mol 43161
+rm mol 96343
+rm mol 39481
+rm mol 63149
+rm mol 68355
+rm mol 31728
+rm mol 56445
+rm mol 111209
+rm mol 13933
+rm mol 108720
+rm mol 87730
+rm mol 41036
+rm mol 31134
+rm mol 32040
+rm mol 31961
+rm mol 57904
+rm mol 50090
+rm mol 70222
+rm mol 31666
+rm mol 40022
+rm mol 51672
+rm mol 33233
+rm mol 47705
+rm mol 94952
+rm mol 68860
+rm mol 132093
+rm mol 125812
+rm mol 171806
+rm mol 58106
+rm mol 115600
+rm mol 142764
+rm mol 157783
+rm mol 226535
+rm mol 178685
+rm mol 231615
+rm mol 151096
+rm mol 159856
+rm mol 172542
+rm mol 162042
+rm mol 123381
+rm mol 211888
+rm mol 155714
+rm mol 174342
+rm mol 174810
+rm mol 202987
+rm mol 220762
+rm mol 178451
+rm mol 211973
+rm mol 174989
+rm mol 160952
+rm mol 130095
+rm mol 147883
+rm mol 122513
+rm mol 163197
+rm mol 163189
+rm mol 143684
+rm mol 138302
+rm mol 205180
+rm mol 154181
+rm mol 150665
+rm mol 18051
+rm mol 79457
+rm mol 1819
+rm mol 40437
+rm mol 7621
+rm mol 90826
+rm mol 2
+rm mol 277
+rm mol 150
+rm mol 478
+rm mol 470
+rm mol 465
+rm mol 46797
+rm mol 387
+rm mol 403
+rm mol 123
+rm mol 328
+rm mol 107
+rm mol 346
+rm mol 104853
+rm mol 6214
+rm mol 45446
+rm mol 44831
+rm mol 24045
+rm mol 68922
+rm mol 10838
+rm mol 89224
+rm mol 33774
+rm mol 56221
+rm mol 41423
+rm mol 44748
+rm mol 23689
+rm mol 16
+rm mol 22165
+rm mol 99977
+rm mol 81703
+rm mol 107911
+rm mol 14672
+rm mol 20528
+rm mol 6078
+rm mol 2894
+rm mol 104624
+rm mol 26115
+rm mol 81741
+rm mol 8432
+rm mol 13753
+rm mol 57249
+rm mol 33040
+rm mol 17339
+rm mol 35801
+rm mol 95865
+rm mol 60836
+rm mol 61299
+rm mol 103490
+rm mol 26955
+rm mol 81581
+rm mol 92237
+rm mol 74204
+rm mol 106083
+rm mol 50971
+rm mol 63587
+rm mol 101850
+rm mol 107089
+rm mol 83927
+rm mol 9068
+rm mol 62103
+rm mol 53136
+rm mol 71713
+rm mol 107376
+rm mol 81058
+rm mol 99483
+rm mol 58670
+rm mol 8040
+rm mol 26618
+rm mol 58955
+rm mol 18066
+rm mol 31633
+rm mol 10585
+rm mol 7746
+rm mol 30629
+rm mol 89250
+rm mol 85135
+rm mol 151337
+rm mol 32125
+rm mol 150321
+rm mol 213842
+rm mol 147751
+rm mol 195742
+rm mol 120468
+rm mol 210849
+rm mol 141876
+rm mol 181601
+rm mol 158222
+rm mol 128649
+rm mol 169057
+rm mol 149213
+rm mol 175244
+rm mol 180087
+rm mol 117791
+rm mol 212334
+rm mol 125926
+rm mol 174684
+rm mol 126460
+rm mol 177324
+rm mol 158093
+rm mol 181462
+rm mol 201217
+rm mol 127462
+rm mol 191694
+rm mol 187171
+rm mol 163232
+rm mol 19860
+rm mol 7900
+rm mol 109119
+rm mol 97798
+rm mol 184207
+rm mol 106220
+rm mol 79644
+rm mol 109068
+rm mol 21127
+rm mol 2463
+rm mol 1165
+rm mol 14616
+rm mol 7670
+rm mol 2694
+rm mol 40951
+rm mol 51131
+rm mol 89328
+rm mol 36122
+rm mol 86379
+rm mol 48328
+rm mol 110046
+rm mol 30816
+rm mol 84280
+rm mol 35079
+rm mol 11100
+rm mol 55224
+rm mol 30292
+rm mol 71233
+rm mol 53395
+rm mol 65308
+rm mol 82009
+rm mol 113285
+rm mol 99624
+rm mol 49243
+rm mol 109446
+rm mol 97370
+rm mol 53657
+rm mol 119418
+rm mol 42357
+rm mol 48448
+rm mol 138005
+rm mol 122242
+rm mol 225607
+rm mol 37799
+rm mol 222811
+rm mol 134366
+rm mol 204013
+rm mol 173679
+rm mol 225154
+rm mol 213108
+rm mol 230247
+rm mol 223061
+rm mol 192968
+rm mol 218542
+rm mol 156830
+rm mol 191856
+rm mol 159590
+rm mol 204387
+rm mol 151773
+rm mol 125041
+rm mol 182279
+rm mol 183086
+rm mol 122862
+rm mol 201269
+rm mol 134875
+rm mol 179447
+rm mol 216021
+rm mol 179645
+rm mol 143513
+rm mol 213662
+rm mol 127470
+rm mol 162519
+rm mol 149939
+rm mol 145252
+rm mol 128870
+rm mol 202922
+rm mol 223187
+rm mol 145446
+rm mol 188453
+rm mol 217812
+rm mol 134547
+rm mol 151992
+rm mol 148642
+rm mol 201200
+rm mol 214734
+rm mol 189674
+rm mol 162214
+rm mol 200187
+rm mol 160093
+rm mol 164041
+rm mol 125992
+rm mol 153528
+rm mol 160745
+rm mol 77235
+rm mol 138380
+rm mol 206734
+rm mol 128329
+rm mol 173939
+rm mol 231028
+rm mol 62288
+rm mol 111556
+rm mol 187116
+rm mol 195254
+rm mol 128186
+rm mol 148354
+rm mol 182476
+rm mol 231312
+rm mol 129808
+rm mol 194337
+rm mol 201415
+rm mol 192665
+rm mol 206990
+rm mol 135634
+rm mol 231819
+rm mol 158911
+rm mol 218740
+rm mol 217348
+rm mol 131835
+rm mol 219764
+rm mol 208067
+rm mol 171605
+rm mol 217021
+rm mol 163138
+rm mol 166863
+rm mol 215751
+rm mol 227830
+rm mol 15913
+rm mol 103383
+rm mol 111684
+rm mol 171730
+rm mol 14557
+rm mol 65792
+rm mol 31032
+rm mol 110801
+rm mol 48604
+rm mol 43497
+rm mol 25176
+rm mol 51085
+rm mol 45755
+rm mol 68063
+rm mol 107017
+rm mol 87343
+rm mol 33622
+rm mol 21942
+rm mol 101542
+rm mol 53758
+rm mol 41486
+rm mol 22268
+rm mol 95367
+rm mol 31419
+rm mol 95857
+rm mol 59026
+rm mol 87192
+rm mol 10425
+rm mol 93111
+rm mol 100124
+rm mol 18132
+rm mol 144732
+rm mol 199432
+rm mol 213004
+rm mol 134797
+rm mol 92116
+rm mol 166619
+rm mol 145669
+rm mol 139835
+rm mol 159978
+rm mol 157112
+rm mol 204139
+rm mol 179181
+rm mol 192776
+rm mol 190539
+rm mol 216775
+rm mol 144538
+rm mol 176259
+rm mol 153211
+rm mol 152628
+rm mol 124634
+rm mol 191862
+rm mol 212081
+rm mol 224119
+rm mol 208822
+rm mol 167226
+rm mol 217578
+rm mol 144254
+rm mol 220045
+rm mol 183993
+rm mol 136002
+rm mol 203451
+rm mol 132135
+rm mol 144823
+rm mol 195566
+rm mol 175568
+rm mol 96589
+rm mol 33792
+rm mol 217967
+rm mol 132013
+rm mol 67411
+rm mol 194205
+rm mol 80624
+rm mol 30550
+rm mol 125289
+rm mol 132087
+rm mol 92866
+rm mol 41861
+rm mol 55413
+rm mol 27091
+rm mol 114438
+rm mol 27838
+rm mol 4152
+rm mol 72621
+rm mol 51568
+rm mol 36458
+rm mol 56765
+rm mol 24049
+rm mol 49564
+rm mol 91550
+rm mol 33888
+rm mol 53521
+rm mol 83480
+rm mol 89630
+rm mol 99696
+rm mol 103717
+rm mol 91544
+rm mol 78414
+rm mol 114607
+rm mol 89677
+rm mol 76421
+rm mol 98122
+rm mol 25636
+rm mol 97507
+rm mol 7232
+rm mol 95767
+rm mol 70318
+rm mol 105527
+rm mol 7756
+rm mol 19420
+rm mol 87440
+rm mol 94941
+rm mol 71506
+rm mol 82733
+rm mol 109316
+rm mol 91085
+rm mol 6631
+rm mol 33480
+rm mol 82313
+rm mol 29792
+rm mol 91371
+rm mol 27198
+rm mol 90666
+rm mol 57161
+rm mol 102902
+rm mol 35719
+rm mol 4150
+rm mol 17253
+rm mol 37407
+rm mol 110675
+rm mol 50729
+rm mol 17661
+rm mol 17654
+rm mol 41714
+rm mol 89675
+rm mol 111570
+rm mol 110162
+rm mol 78640
+rm mol 82148
+rm mol 103194
+rm mol 91318
+rm mol 83006
+rm mol 93914
+rm mol 100561
+rm mol 73446
+rm mol 115804
+rm mol 81912
+rm mol 75579
+rm mol 18041
+rm mol 13692
+rm mol 87472
+rm mol 25484
+rm mol 113321
+rm mol 106778
+rm mol 39052
+rm mol 96739
+rm mol 48843
+rm mol 108274
+rm mol 97824
+rm mol 35800
+rm mol 15210
+rm mol 94101
+rm mol 52636
+rm mol 97267
+rm mol 99998
+rm mol 1672
+rm mol 2347
+rm mol 110024
+rm mol 70609
+rm mol 86668
+rm mol 77208
+rm mol 112943
+rm mol 17166
+rm mol 39140
+rm mol 42994
+rm mol 10329
+rm mol 15948
+rm mol 28695
+rm mol 31113
+rm mol 42367
+rm mol 48552
+rm mol 4037
+rm mol 2179
+rm mol 6328
+rm mol 1622
+rm mol 72343
+rm mol 44037
+rm mol 35063
+rm mol 63003
+rm mol 69315
+rm mol 78267
+rm mol 11284
+rm mol 71661
+rm mol 15112
+rm mol 92010
+rm mol 87199
+rm mol 46994
+rm mol 94029
+rm mol 48276
+rm mol 88705
+rm mol 105196
+rm mol 46375
+rm mol 53377
+rm mol 41847
+rm mol 27835
+rm mol 90448
+rm mol 87581
+rm mol 98505
+rm mol 17579
+rm mol 2305
+rm mol 1838
+rm mol 79477
+rm mol 8609
+rm mol 30572
+rm mol 94803
+rm mol 96425
+rm mol 1967
+rm mol 14111
+rm mol 69459
+rm mol 75372
+rm mol 37298
+rm mol 74864
+rm mol 94536
+rm mol 74581
+rm mol 89511
+rm mol 50484
+rm mol 14506
+rm mol 44727
+rm mol 87505
+rm mol 12977
+rm mol 106121
+rm mol 13505
+rm mol 19223
+rm mol 45234
+rm mol 26100
+rm mol 68520
+rm mol 40737
+rm mol 41220
+rm mol 94128
+rm mol 40130
+rm mol 75043
+rm mol 98697
+rm mol 25645
+rm mol 77499
+rm mol 43733
+rm mol 108549
+rm mol 45810
+rm mol 72686
+rm mol 64207
+rm mol 39538
+rm mol 44687
+rm mol 43771
+rm mol 77180
+rm mol 115817
+rm mol 23878
+rm mol 90973
+rm mol 105575
+rm mol 70700
+rm mol 105294
+rm mol 98456
+rm mol 57601
+rm mol 70490
+rm mol 45313
+rm mol 104348
+rm mol 36689
+rm mol 53170
+rm mol 5671
+rm mol 24292
+rm mol 34462
+rm mol 50162
+rm mol 93978
+rm mol 57809
+rm mol 77476
+rm mol 90631
+rm mol 92167
+rm mol 19284
+rm mol 31207
+rm mol 38568
+rm mol 74900
+rm mol 75887
+rm mol 67035
+rm mol 85643
+rm mol 70663
+rm mol 51897
+rm mol 95917
+rm mol 10718
+rm mol 18170
+rm mol 54565
+rm mol 109037
+rm mol 80779
+rm mol 103306
+rm mol 56636
+rm mol 2615
+rm mol 15637
+rm mol 31525
+rm mol 51613
+rm mol 58635
+rm mol 97787
+rm mol 34336
+rm mol 3259
+rm mol 57406
+rm mol 38602
+rm mol 5564
+rm mol 20479
+rm mol 35484
+rm mol 38336
+rm mol 40090
+rm mol 81340
+rm mol 55435
+rm mol 95311
+rm mol 28001
+rm mol 27310
+rm mol 31050
+rm mol 96742
+rm mol 21657
+rm mol 111921
+rm mol 107456
+rm mol 114879
+rm mol 96401
+rm mol 34770
+rm mol 88812
+rm mol 79951
+rm mol 84762
+rm mol 4620
+rm mol 17623
+rm mol 106021
+rm mol 114924
+rm mol 91983
+rm mol 30160
+rm mol 97099
+rm mol 72287
+rm mol 218219
+rm mol 203927
+rm mol 145720
+rm mol 173214
+rm mol 147178
+rm mol 184406
+rm mol 17362
+rm mol 227576
+rm mol 162927
+rm mol 185122
+rm mol 116970
+rm mol 197682
+rm mol 126386
+rm mol 230850
+rm mol 159207
+rm mol 229162
+rm mol 227035
+rm mol 224272
+rm mol 139460
+rm mol 124674
+rm mol 165863
+rm mol 205293
+rm mol 171393
+rm mol 122160
+rm mol 191591
+rm mol 179618
+rm mol 24754
+rm mol 53476
+rm mol 113929
+rm mol 7446
+rm mol 91818
+rm mol 200
+rm mol 203
+rm mol 386
+rm mol 156
+rm mol 82686
+rm mol 8697
+rm mol 176
+rm mol 10392
+rm mol 57352
+rm mol 96176
+rm mol 633
+rm mol 695
+rm mol 113
+rm mol 47511
+rm mol 57620
+rm mol 33113
+rm mol 111834
+rm mol 43233
+rm mol 73673
+rm mol 31453
+rm mol 96731
+rm mol 93095
+rm mol 18585
+rm mol 111054
+rm mol 16828
+rm mol 96789
+rm mol 48398
+rm mol 91755
+rm mol 30417
+rm mol 86988
+rm mol 93510
+rm mol 74893
+rm mol 27597
+rm mol 27066
+rm mol 106522
+rm mol 43397
+rm mol 83637
+rm mol 21216
+rm mol 37937
+rm mol 52072
+rm mol 81786
+rm mol 32045
+rm mol 36910
+rm mol 60945
+rm mol 28947
+rm mol 48531
+rm mol 72213
+rm mol 85806
+rm mol 11556
+rm mol 76922
+rm mol 16411
+rm mol 57457
+rm mol 17029
+rm mol 15263
+rm mol 63218
+rm mol 86087
+rm mol 106784
+rm mol 27856
+rm mol 46310
+rm mol 103505
+rm mol 104332
+rm mol 105769
+rm mol 39780
+rm mol 17398
+rm mol 6630
+rm mol 86759
+rm mol 90096
+rm mol 75681
+rm mol 99988
+rm mol 13453
+rm mol 42368
+rm mol 64023
+rm mol 216140
+rm mol 182494
+rm mol 6317
+rm mol 89681
+rm mol 59619
+rm mol 111346
+rm mol 141207
+rm mol 133514
+rm mol 134208
+rm mol 165898
+rm mol 200700
+rm mol 229222
+rm mol 133290
+rm mol 44613
+rm mol 104077
+rm mol 46304
+rm mol 123171
+rm mol 157776
+rm mol 178851
+rm mol 123448
+rm mol 30420
+rm mol 152755
+rm mol 179582
+rm mol 164079
+rm mol 139138
+rm mol 163493
+rm mol 55005
+rm mol 37911
+rm mol 102918
+rm mol 41586
+rm mol 110861
+rm mol 73169
+rm mol 75102
+rm mol 11799
+rm mol 13473
+rm mol 115888
+rm mol 21307
+rm mol 13272
+rm mol 40424
+rm mol 84218
+rm mol 20563
+rm mol 53112
+rm mol 104690
+rm mol 103590
+rm mol 107234
+rm mol 61880
+rm mol 28892
+rm mol 66709
+rm mol 95460
+rm mol 96855
+rm mol 24133
+rm mol 56872
+rm mol 33455
+rm mol 104881
+rm mol 48415
+rm mol 228732
+rm mol 163757
+rm mol 152602
+rm mol 23657
+rm mol 139725
+rm mol 137896
+rm mol 182054
+rm mol 224476
+rm mol 122917
+rm mol 202908
+rm mol 174543
+rm mol 120733
+rm mol 186695
+rm mol 137957
+rm mol 135389
+rm mol 176368
+rm mol 125538
+rm mol 142105
+rm mol 183974
+rm mol 121828
+rm mol 224887
+rm mol 212179
+rm mol 155894
+rm mol 182029
+rm mol 155595
+rm mol 184100
+rm mol 179306
+rm mol 176959
+rm mol 199096
+rm mol 164726
+rm mol 22323
+rm mol 177303
+rm mol 207805
+rm mol 95163
+rm mol 60155
+rm mol 37271
+rm mol 12962
+rm mol 4792
+rm mol 63334
+rm mol 17662
+rm mol 14285
+rm mol 45598
+rm mol 59404
+rm mol 98533
+rm mol 26481
+rm mol 36740
+rm mol 97021
+rm mol 96575
+rm mol 1663
+rm mol 72956
+rm mol 35974
+rm mol 12346
+rm mol 14972
+rm mol 106195
+rm mol 50048
+rm mol 89016
+rm mol 86953
+rm mol 69202
+rm mol 34764
+rm mol 83895
+rm mol 81989
+rm mol 35889
+rm mol 48359
+rm mol 66754
+rm mol 89287
+rm mol 56529
+rm mol 58070
+rm mol 76015
+rm mol 189858
+rm mol 190037
+rm mol 157924
+rm mol 222102
+rm mol 89172
+rm mol 6575
+rm mol 8016
+rm mol 72303
+rm mol 18976
+rm mol 53551
+rm mol 16128
+rm mol 76456
+rm mol 18430
+rm mol 88978
+rm mol 38458
+rm mol 89680
+rm mol 107786
+rm mol 85904
+rm mol 26228
+rm mol 75175
+rm mol 61409
+rm mol 60179
+rm mol 2734
+rm mol 73357
+rm mol 45865
+rm mol 88665
+rm mol 86637
+rm mol 29774
+rm mol 102424
+rm mol 115903
+rm mol 25150
+rm mol 25009
+rm mol 44634
+rm mol 14651
+rm mol 165684
+rm mol 5283
+rm mol 21237
+rm mol 218838
+rm mol 183156
+rm mol 186931
+rm mol 140343
+rm mol 217677
+rm mol 225228
+rm mol 168411
+rm mol 193413
+rm mol 225214
+rm mol 147292
+rm mol 201330
+rm mol 188278
+rm mol 228925
+rm mol 146463
+rm mol 141176
+rm mol 217585
+rm mol 142409
+rm mol 148047
+rm mol 178251
+rm mol 153301
+rm mol 194482
+rm mol 44553
+rm mol 93004
+rm mol 103930
+rm mol 76544
+rm mol 143300
+rm mol 16997
+rm mol 214779
+rm mol 115881
+rm mol 169128
+rm mol 109622
+rm mol 88006
+rm mol 56166
+rm mol 89206
+rm mol 94743
+rm mol 16681
+rm mol 70577
+rm mol 34696
+rm mol 108027
+rm mol 62882
+rm mol 19155
+rm mol 107363
+rm mol 76716
+rm mol 17315
+rm mol 105760
+rm mol 1493
+rm mol 74330
+rm mol 68933
+rm mol 69472
+rm mol 88093
+rm mol 40929
+rm mol 82899
+rm mol 85853
+rm mol 69776
+rm mol 32841
+rm mol 76734
+rm mol 8763
+rm mol 62990
+rm mol 19133
+rm mol 81617
+rm mol 86763
+rm mol 73826
+rm mol 68307
+rm mol 102203
+rm mol 30612
+rm mol 24047
+rm mol 30143
+rm mol 46190
+rm mol 91492
+rm mol 54721
+rm mol 113296
+rm mol 105572
+rm mol 68867
+rm mol 101570
+rm mol 80106
+rm mol 83770
+rm mol 85911
+rm mol 56841
+rm mol 12064
+rm mol 67077
+rm mol 6307
+rm mol 50649
+rm mol 62473
+rm mol 107585
+rm mol 57544
+rm mol 63385
+rm mol 104656
+rm mol 64842
+rm mol 2663
+rm mol 19480
+rm mol 55477
+rm mol 93867
+rm mol 79410
+rm mol 74649
+rm mol 22944
+rm mol 68338
+rm mol 73934
+rm mol 95125
+rm mol 110250
+rm mol 24332
+rm mol 97785
+rm mol 57385
+rm mol 56366
+rm mol 68064
+rm mol 73294
+rm mol 47139
+rm mol 73138
+rm mol 27092
+rm mol 76079
+rm mol 20190
+rm mol 73503
+rm mol 68920
+rm mol 93829
+rm mol 29504
+rm mol 49693
+rm mol 25386
+rm mol 22647
+rm mol 61480
+rm mol 49508
+rm mol 3911
+rm mol 94285
+rm mol 59139
+rm mol 25250
+rm mol 13527
+rm mol 79370
+rm mol 1807
+rm mol 102627
+rm mol 91902
+rm mol 17243
+rm mol 107207
+rm mol 49658
+rm mol 75919
+rm mol 41622
+rm mol 104446
+rm mol 52603
+rm mol 6802
+rm mol 92786
+rm mol 91270
+rm mol 59216
+rm mol 64056
+rm mol 44092
+rm mol 44312
+rm mol 87373
+rm mol 74002
+rm mol 65754
+rm mol 83510
+rm mol 63605
+rm mol 28757
+rm mol 108586
+rm mol 3137
+rm mol 21732
+rm mol 68706
+rm mol 7950
+rm mol 108571
+rm mol 102981
+rm mol 3584
+rm mol 12733
+rm mol 67073
+rm mol 30142
+rm mol 35291
+rm mol 73504
+rm mol 9903
+rm mol 30082
+rm mol 30779
+rm mol 20122
+rm mol 20467
+rm mol 32104
+rm mol 81450
+rm mol 24798
+rm mol 110039
+rm mol 39476
+rm mol 76987
+rm mol 70371
+rm mol 4718
+rm mol 17411
+rm mol 37063
+rm mol 81932
+rm mol 97044
+rm mol 112361
+rm mol 56836
+rm mol 85960
+rm mol 105018
+rm mol 93874
+rm mol 112811
+rm mol 6108
+rm mol 75313
+rm mol 97461
+rm mol 102144
+rm mol 104590
+rm mol 54532
+rm mol 70274
+rm mol 84007
+rm mol 95560
+rm mol 58627
+rm mol 96734
+rm mol 81289
+rm mol 92038
+rm mol 102155
+rm mol 34807
+rm mol 114294
+rm mol 96355
+rm mol 72449
+rm mol 87037
+rm mol 44840
+rm mol 19689
+rm mol 99275
+rm mol 113726
+rm mol 75645
+rm mol 100062
+rm mol 89912
+rm mol 31038
+rm mol 113648
+rm mol 56766
+rm mol 16084
+rm mol 101605
+rm mol 51592
+rm mol 115375
+rm mol 96246
+rm mol 75074
+rm mol 15717
+rm mol 9150
+rm mol 59879
+rm mol 59652
+rm mol 75479
+rm mol 95517
+rm mol 101796
+rm mol 14303
+rm mol 65231
+rm mol 98007
+rm mol 69233
+rm mol 22326
+rm mol 61700
+rm mol 16482
+rm mol 51115
+rm mol 34502
+rm mol 96053
+rm mol 32030
+rm mol 112370
+rm mol 107430
+rm mol 24051
+rm mol 58120
+rm mol 26804
+rm mol 38288
+rm mol 2479
+rm mol 41836
+rm mol 93227
+rm mol 24835
+rm mol 5926
+rm mol 52583
+rm mol 68939
+rm mol 13138
+rm mol 83261
+rm mol 102200
+rm mol 47387
+rm mol 98519
+rm mol 89122
+rm mol 6728
+rm mol 22899
+rm mol 163744
+rm mol 170793
+rm mol 130497
+rm mol 164117
+rm mol 144047
+rm mol 124840
+rm mol 163269
+rm mol 130473
+rm mol 211616
+rm mol 142888
+rm mol 228285
+rm mol 131090
+rm mol 182039
+rm mol 190613
+rm mol 181360
+rm mol 181291
+rm mol 153533
+rm mol 64853
+rm mol 72345
+rm mol 17598
+rm mol 167
+rm mol 61337
+rm mol 336
+rm mol 77
+rm mol 9
+rm mol 24
+
+NOTE: This file uses the deprecated 'group' cutoff_scheme. This will be
+removed in a future release when 'verlet' supports all interaction forms.
+
+System total charge: 21.000
+Will do PME sum in reciprocal space for electrostatic interactions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+U. Essmann, L. Perera, M. L. Berkowitz, T. Darden, H. Lee and L. G. Pedersen 
+A smooth particle mesh Ewald method
+J. Chem. Phys. 103 (1995) pp. 8577-8592
+-------- -------- --- Thank You --- -------- --------
+
+Using a Gaussian width (1/beta) of 0.384195 nm for Ewald
+Potential shift: LJ r^-12: 0.000e+00 r^-6: 0.000e+00, Ewald -0.000e+00
+Initialized non-bonded Ewald correction tables, spacing: 1.02e-03 size: 2154
+
+Table routines are used for coulomb: false
+Table routines are used for vdw:     false
+Cut-off's:   NS: 1.2   Coulomb: 1.2   LJ: 1.2
+Generated table with 1100 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1100 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1100 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+
+Removing pbc first time
+
+Initializing LINear Constraint Solver
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and H. Bekker and H. J. C. Berendsen and J. G. E. M. Fraaije
+LINCS: A Linear Constraint Solver for molecular simulations
+J. Comp. Chem. 18 (1997) pp. 1463-1472
+-------- -------- --- Thank You --- -------- --------
+
+The number of constraints is 242326
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Miyamoto and P. A. Kollman
+SETTLE: An Analytical Version of the SHAKE and RATTLE Algorithms for Rigid
+Water Models
+J. Comp. Chem. 13 (1992) pp. 952-962
+-------- -------- --- Thank You --- -------- --------
+
+Intra-simulation communication will occur every 10 steps.
+Center of mass motion removal mode is Linear
+We have the following groups for center of mass motion removal:
+  0:  rest
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+G. Bussi, D. Donadio and M. Parrinello
+Canonical sampling through velocity rescaling
+J. Chem. Phys. 126 (2007) pp. 014101
+-------- -------- --- Thank You --- -------- --------
+
+There are: 940849 Atoms
+
+Constraining the starting coordinates (step 0)
+
+Constraining the coordinates at t0-dt (step 0)
+RMS relative constraint deviation after constraining: 3.90e-06
+Initial temperature: 0.00117614 K
+
+Started mdrun on rank 0 Fri Jun 18 11:49:44 2021
+           Step           Time
+              0        0.00000
+
+
+Grid: 30 x 30 x 53 cells
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    6.32671e+05    4.14426e+05    4.49308e+03    6.22317e+04   -8.62733e+05
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    5.60095e+05   -1.02572e+07   -8.35855e+05   -1.02819e+07    6.21943e+04
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -1.02197e+07   -1.02169e+07    7.97361e+00   -2.05850e+03    7.18255e-06
+
+           Step           Time
+           1000        2.00000
+
+Writing checkpoint, step 1000 at Fri Jun 18 14:31:14 2021
+
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    6.08537e+05    4.10662e+05    4.50335e+03    6.78428e+04   -8.58945e+05
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    5.74037e+05   -1.03674e+07   -8.54037e+05   -1.04148e+07    2.42480e+06
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -7.98995e+06   -1.00432e+07    3.10872e+02    1.56967e+02    9.44490e-06
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 1001 steps using 21 frames
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.          LJ-14     Coulomb-14
+    6.02783e+05    4.05552e+05    4.26454e+03    6.64219e+04   -8.59062e+05
+        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential    Kinetic En.
+    6.06496e+05   -1.04973e+07   -8.58998e+05   -1.05298e+07    2.23834e+06
+   Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
+   -8.29148e+06   -1.00931e+07    2.86966e+02   -1.50694e+01    0.00000e+00
+
+          Box-X          Box-Y          Box-Z
+    1.72857e+01    1.72857e+01    3.03890e+01
+
+   Total Virial (kJ/mol)
+    7.35930e+05    1.90200e+03    1.08729e+03
+    1.95200e+03    7.33872e+05    3.82184e+03
+    1.24553e+03    3.81414e+03    7.81479e+05
+
+   Pressure (bar)
+    1.95039e+01   -6.68727e+00   -5.97878e+00
+   -6.86760e+00    2.91662e+01   -1.08791e+01
+   -6.55386e+00   -1.08508e+01   -9.38783e+01
+
+  Epot (kJ/mol)        Coul-SR          LJ-SR        Coul-14          LJ-14   
+Protein-Protein    0.00000e+00    0.00000e+00    0.00000e+00    0.00000e+00
+   Protein-rest   -2.66009e+04   -5.55628e+03    0.00000e+00    0.00000e+00
+      rest-rest   -1.04707e+07    6.12052e+05   -8.59062e+05    6.64219e+04
+
+      T-Protein         T-POPCT-Water_and_ions
+    0.00000e+00    2.87663e+02    2.86712e+02
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ NB VdW [V&F]                            17.545516          17.546     0.0
+ NB VdW [F]                             696.935940         696.936     0.0
+ NB VdW & Elec. [V&F]                 24746.319093       24746.319     0.5
+ NB VdW & Elec. [F]                 1298471.460969     1298471.461    24.2
+ 1,4 nonbonded interactions             649.280632       58435.257     1.1
+ Calc Weights                          2825.369547      101713.304     1.9
+ Spread Q Bspline                     60274.550336      120549.101     2.2
+ Gather F Bspline                     60274.550336      361647.302     6.7
+ 3D-FFT                              297094.345548     2376754.764    44.3
+ Solve PME                               25.625600        1640.038     0.0
+ NS-Pairs                             29339.525712      616130.040    11.5
+ Reset In Box                            49.296585         147.890     0.0
+ Shift-X                               1850.442594       11102.656     0.2
+ CG-CoM                                  95.025749         285.077     0.0
+ Propers                                787.891104      180427.063     3.4
+ Impropers                                3.647644         758.710     0.0
+ Virial                                  95.030294        1710.545     0.0
+ Stop-CM                                 11.290188         112.902     0.0
+ P-Coupling                              95.025749         570.154     0.0
+ Calc-Ekin                              190.051498        5131.390     0.1
+ Lincs                                  243.052978       14583.179     0.3
+ Lincs-Mat                             5613.975552       22455.902     0.4
+ Constraint-V                          1166.125596        9329.005     0.2
+ Constraint-Vir                          93.068672        2233.648     0.0
+ Settle                                 227.061146       73340.750     1.4
+ Urey-Bradley                           466.898432       85442.413     1.6
+-----------------------------------------------------------------------------
+ Total                                                 5368433.352   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1    1        101     576.237       2129.778   5.9
+ Force                  1    1       1001    8593.571      31761.945  88.6
+ PME mesh               1    1       1001     462.070       1707.818   4.8
+ Write traj.            1    1          2       4.518         16.700   0.0
+ Update                 1    1       1001       8.298         30.670   0.1
+ Constraints            1    1       1001      46.988        173.667   0.5
+ Rest                                           2.687          9.933   0.0
+-----------------------------------------------------------------------------
+ Total                                       9694.370      35830.511 100.0
+-----------------------------------------------------------------------------
+ Breakdown of PME mesh computation
+-----------------------------------------------------------------------------
+ PME spread             1    1       1001     198.689        734.356   2.0
+ PME gather             1    1       1001     189.451        700.211   2.0
+ PME 3D-FFT             1    1       2002      56.491        208.791   0.6
+ PME solve Elec         1    1       1001      17.430         64.420   0.2
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     9694.370     9694.370      100.0
+                         2h41:34
+                 (ns/day)    (hour/ns)
+Performance:        0.018     1345.095
+Finished mdrun on rank 0 Fri Jun 18 14:31:18 2021

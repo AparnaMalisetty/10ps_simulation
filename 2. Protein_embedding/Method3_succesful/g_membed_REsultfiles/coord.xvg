@@ -1,0 +1,27 @@
+# This file was created Fri Jun 18 11:07:52 2021
+# Created by:
+#                       :-) GROMACS - gmx traj, 2018.8 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /mnt/c/Aparna/HP2X4_FINAL/10ps_membraneproteinruns/rP2X1_genconf
+# Command line:
+#   gmx traj -f POPC_genconf.gro -s POPC_genconf.gro -ox -com
+# gmx traj is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "Center of mass"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Coordinate (nm)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "POPC X"
+@ s1 legend "POPC Y"
+@ s2 legend "POPC Z"
+ 164503	8.65236	8.62074	15.7351
