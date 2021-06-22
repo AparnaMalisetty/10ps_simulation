@@ -28,5 +28,5 @@ Note: the rP2X1 has a huge extracellular domain and when inserted into membrane 
 
 STEP3: energy minimisation
 For thi step Method4 output is selected again tries two methods: Method4.1 and Method 4.2
-1) Method4.1: the output of protein embedded in membrane : rP2X1_POPCmembrane.pdb is directly energy minimised without adding any further solvent
+1) Method4.1: the output of protein embedded in membrane : rP2X1_POPCmembrane.pdb is directly energy minimised without adding any further solvent. 5000 steps of steepest descent is done.
 2) Method 4.2: the output rP2X1_POPCmembed.pdb is olvated to cover the remaining part of the protein. The water present in between the lipid bilayer is then removed using the waterdeletor.pl script present in the gromacs tutorial. then energy minimised until the force converges to  <1000
