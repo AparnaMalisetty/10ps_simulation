@@ -17,7 +17,8 @@ STEP1: Orientation of the protein using Opm server
 1) rP2X1 homology model is built usinmg the software Modeller 10.0. The sidechains are modelled using scwrl4 program : rP2X1_sc.pdb
 2) opm server (https://opm.phar.umich.edu/ppm_server) is used for the proper orientation of the protein in membrane and the output from the server is saved as rP2X1_opmout.pdb
 3) rP2X1_sc.pdb is aligned to rP2X1_opmout.pdb in pymol and molecule is saved as rP2X1_opm.pdb
-4) this is used to generate topology file in GROMACS 2018.
+4) teh protein chains are properly numbered using genconf tool of g_membed and is required or else in teh final ouput only one monomer will be shown when you select show as cartoon and also during enrgy minimisation mismatch atoms will occur due to sam echain number sin all chains.
+5) rP2X1_opm.pdb after proper numbering is used to generate topology file in GROMACS 2018.
  
 STEP2: Protein embedding in pre-equilibrated lipid bilayer
 Different methods are done to get the proper embedding on protein in membrane: CHARMM36m_POPCbilayer.pdb is a pre equilibrated lipid bilayer which I got it from Saskia (works at Juelich)
