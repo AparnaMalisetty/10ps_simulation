@@ -1,7 +1,7 @@
 # 10ps_simulation
 A 10ps of equilibration with varying constraints and production is done to verify the code and to verify the input and output files to use it later in cluster.
 
-simulation is done using GROMACS 2018 and charmm36 as force field. the protein used here is rP2X1 homology model built using template hP2X3 (5svj)
+simulation is done using GROMACS 2018 and charmm36 as force field and Tip§p as water solvent. the protein used here is rP2X1 homology model built using template hP2X3 (5svj)
 
 steps:
 1) orientation of the protein using opm server
