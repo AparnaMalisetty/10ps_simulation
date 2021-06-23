@@ -33,5 +33,6 @@ For thi step Method4 output is selected again tries two methods: Method4.1 and M
 1) Method4.1: the output of protein embedded in membrane : rP2X1_POPCmembrane.pdb is directly energy minimised without adding any further solvent. 5000 steps of steepest descent is done. em.gro is the output.
 2) Method 4.2: the output rP2X1_POPCmembed.pdb is olvated to cover the remaining part of the protein. The water present in between the lipid bilayer is then removed using the waterdeletor.pl script present in the gromacs tutorial. then energy minimised until the force converges to  <1000. em.gro is the output
 
-STEP4: NVT equilibration with position retsraints
+STEP4: NVT equilibration with position restraints
+both the energy minimised structures from Method4.1 and Method 4.2 are NVT equilibrated for 10ps woth only position restraints on the protein with force constant 1000 kj/mol/nm2.. So no lipid_posre-itp is included because it has position restraints for POPC.
 
