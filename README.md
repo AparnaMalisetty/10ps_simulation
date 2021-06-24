@@ -36,3 +36,7 @@ For thi step Method4 output is selected again tries two methods: Method4.1 and M
 STEP4: NVT equilibration with position restraints
 both the energy minimised structures from Method4.1 and Method 4.2 are NVT equilibrated for 10ps woth only position restraints on the protein with force constant 1000 kj/mol/nm2.. So no lipid_posre-itp is included because it has position restraints for POPC.
 
+STEP5: NPT equilibration1 with position retsraints on protein
+both the nvt outputs 4.1nvt.gro and 4.2nvt.gro is NPT ensemble equilibrated for 10ps with position restraints on protein with force constant 1000 kj/mol/nm.
+
+
