@@ -1,0 +1,81 @@
+include                  =
+define                   = 
+
+; RUN CONTROL PARAMETERS
+integrator               = md  ;for molecular dynmaics simulation uses newtons equation of motion
+; Start time and timestep in ps
+tinit                    = 0
+dt                       = 0.002
+nsteps                   = 1000
+
+; OUTPUT CONTROL OPTIONS
+; Output frequency for coords (x), velocities (v) and forces (f)
+nstxout                  = 100000
+nstvout                  = 100000
+nstfout                  = 100000
+; Output frequency for energies to log file and energy file
+nstlog                   = 100000
+nstenergy                = 50
+
+; Selection of energy groups
+energygrps               = Protein
+
+; NEIGHBORSEARCHING PARAMETERS
+; cut-off scheme (Verlet: particle based cut-offs, group: using charge groups)
+cutoff-scheme            = group
+
+; Periodic boundary conditions: xyz, no, xy
+pbc                      = xyz
+; nblist cut-off        
+rlist                    = 1.2
+
+; OPTIONS FOR ELECTROSTATICS AND VDW
+; Method for doing electrostatics
+coulombtype              = PME
+rcoulomb-switch          = 0
+rcoulomb                 = 1.2
+
+; Method for doing Van der Waals
+vdw-type                 = Cut-off
+; cut-off lengths       
+rvdw-switch              = 1.0
+rvdw                     = 1.2
+; Apply long range dispersion corrections for Energy and Pressure
+DispCorr                 = No
+
+
+
+; OPTIONS FOR WEAK COUPLING ALGORITHMS
+; Temperature coupling  
+tcoupl                   = v-rescale
+; Groups to couple separately
+tc-grps                  = Protein POPC 
+; Time constant (ps) and reference temperature (K)
+tau-t                    = 0.1 0.1   
+ref-t                    = 310 310 
+; Pressure coupling     
+Pcoupl                   = Berendsen 
+Pcoupltype               = semiisotropic
+; Time constant (ps), compressibility (1/bar) and reference P (bar)
+tau-p                    = 1 ;time constant in ps
+compressibility          = 5.3e-05 5.3e-05
+ref-p                    = 1.0 1.0 ;reference pressure, x-y,z (in bar)
+
+
+; OPTIONS FOR BONDS    
+constraints              = all-bonds 
+; Type of constraint algorithm
+constraint-algorithm     = Lincs
+
+
+; ENERGY GROUP EXCLUSIONS
+; Pairs of energy groups for which all non-bonded interactions are excluded
+energygrp_excl           = Protein Protein
+
+
+
+; Non-equilibrium MD stuff
+freezegrps               = Protein
+freezedim                =Y Y Y
+
+

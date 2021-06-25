@@ -1,0 +1,25 @@
+;
+;	File 'membed.dat' was generated
+;	By user: unknown (0)
+;	On host: UK-2016600318
+;	At date: Tue Jun 15 14:18:14 2021
+;
+;	Created by:
+;	                     :-) GROMACS - gmx mdrun, 2018.8 (-:
+;	
+;	Executable:   /usr/local/gromacs/bin/gmx
+;	Data prefix:  /usr/local/gromacs
+;	Working dir:  /mnt/c/Aparna/HP2X4_FINAL/10ps_membraneproteinruns/trial_newsolvation
+;	Command line:
+;	  gmx mdrun -membed membed.dat -s membed.tpr -v -c rP2X1_POPCmembed.pdb
+nxy                      = 1000
+nz                       = 0
+xyinit                   = 0.50000
+xyend                    = 1.000000
+zinit                    = 1.000000
+zend                     = 1.000000
+rad                      = 0.22
+ndiff                    = 0
+maxwarn                  = 0
+pieces                   = 1
+asymmetry                = no
